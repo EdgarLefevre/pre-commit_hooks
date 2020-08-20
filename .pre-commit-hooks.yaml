@@ -5,4 +5,9 @@
   exclude: ".yaml$|.yml$"
   language: "script"
   description: "Check existence of env.yaml"
-
+- id: "conda_check_deps"
+  name: "Conda check dependencies"
+  entry: conda_check_deps.sh
+  types: [file]
+  language: "script"
+  description: "Check that there is the same number of modules in env.yaml as in the env folder."
