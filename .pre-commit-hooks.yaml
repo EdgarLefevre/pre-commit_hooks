@@ -1,7 +1,7 @@
 - id: "conda_check_env"
   name: "Conda check env"
   entry: conda_check_env.sh
-  types: [text]
+  types: [files]
   exclude: ".yaml$|.yml$"
   language: "script"
   description: "Check existence of env.yaml"
