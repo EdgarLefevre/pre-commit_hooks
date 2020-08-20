@@ -1,8 +1,8 @@
-- id: "test-hook"
-  name: "Test Hook"
-  entry: run-test-hook.sh
+- id: "conda_check_env"
+  name: "Conda check env"
+  entry: conda_check_env.sh
   types: [text]
   exclude: ".yaml$|.yml$"
   language: "script"
-  description: "This is a test"
+  description: "Check existence of env.yaml"
 
