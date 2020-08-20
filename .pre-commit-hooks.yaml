@@ -5,5 +5,4 @@
   exclude: ".yaml$|.yml$"
   language: "script"
   description: "Check existence of env.yaml"
-  verbose: true
 
