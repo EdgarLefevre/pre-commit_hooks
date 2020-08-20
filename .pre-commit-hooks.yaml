@@ -1,7 +1,7 @@
 - id: "test-hook"
   name: "Test Hook"
   entry: run-test-hook.sh
-  type: [text]
+  types: [text]
   exclude: ".yaml$|.yml$"
   language: "script"
   description: "This is a test"
