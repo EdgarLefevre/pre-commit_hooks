@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-echo "The hook is running"
 FILE=env.yaml
 errCode=0
 if ! [[ -f "$FILE" ]]; then
