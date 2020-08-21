@@ -21,7 +21,13 @@ done < $filename
 
 # folder
 
-conda_path="$(dirname $(dirname "$CONDA_EXE"))"/envs/"$(basename $PWD)"/conda-meta/""
+if [[ -z "${CONDA_EXE}" ]]; then
+  conda_var="${_CONDA_EXE}"
+else
+  conda_var="${CONDA_EXE}"
+fi
+
+conda_path="$(dirname $(dirname "$conda_var"))"/envs/"$(basename $PWD)"/conda-meta/""
 n_folder=$(ls $conda_path | wc -l)
 
 if ! [[ $n == $n_folder ]];then
