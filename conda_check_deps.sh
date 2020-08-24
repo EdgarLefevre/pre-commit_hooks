@@ -44,6 +44,7 @@ if [[ -f $filename ]]; then
 
     if ! [[ $n == $n_folder ]];then
     	errCode=1
+        echo $n"    "$n_folder
     	echo "environment.yml is not up to date"
     fi
 else
