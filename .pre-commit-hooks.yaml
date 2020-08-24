@@ -11,9 +11,3 @@
   types: [file]
   language: "script"
   description: "Check that there is the same number of modules in env.yaml as in the env folder."
-- id: run_pytest
-  name: "Run Pytest"
-  entry: run_pytest.py
-  types: [python]
-  language: "conda"
-  description: "Run all tests."
