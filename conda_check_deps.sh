@@ -18,7 +18,6 @@ if [[ -f $filename ]]; then
             IFS=' ' read -ra line_array <<< "$var"
             ENV_NAME=${line_array[1]}
             first_line=1
-            echo $ENV_NAME
         fi
 
         if [[ $deps == 1 ]];then
