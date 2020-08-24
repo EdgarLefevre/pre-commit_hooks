@@ -32,7 +32,7 @@ n_folder=$(ls $conda_path | wc -l)
 
 if ! [[ $n == $n_folder ]];then
 	exitCode=1
-	echo "env.yaml is not up to date"
+	echo "environment.yml is not up to date"
 fi
 
 exit $errCode
