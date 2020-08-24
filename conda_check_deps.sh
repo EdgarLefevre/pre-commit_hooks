@@ -31,7 +31,7 @@ conda_path="$(dirname $(dirname "$conda_var"))"/envs/"$(basename $PWD)"/conda-me
 n_folder=$(ls $conda_path | wc -l)
 
 if ! [[ $n == $n_folder ]];then
-	exitCode=1
+	errCode=1
 	echo "environment.yml is not up to date"
 fi
 
