@@ -20,7 +20,7 @@ if [[ -f $filename ]]; then
             first_line=1
         fi
 
-        if [[ $deps == 1 ]];then
+        if [[ $deps == 1 ]] && [[ $line != "" ]];then
         	n=$((n+1))
         fi   
         

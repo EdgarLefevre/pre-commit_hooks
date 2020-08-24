@@ -5,8 +5,9 @@ channels:
 dependencies:
   - _libgcc_mutex=0.1=main
   - appdirs=1.4.3=py_1
-  - ca-certificates=2020.6.20=hecda079_0
-  - certifi=2020.6.20=py36h9f0ad1d_0
+  - attrs=19.3.0=py_0
+  - ca-certificates=2020.6.24=0
+  - certifi=2020.6.20=py36_0
   - cfgv=3.2.0=py_0
   - distlib=0.3.1=pyh9f0ad1d_0
   - editdistance=0.5.3=py36h831f99a_1
@@ -15,16 +16,23 @@ dependencies:
   - importlib-metadata=1.7.0=py36h9f0ad1d_0
   - importlib_metadata=1.7.0=0
   - importlib_resources=1.5.0=py36h9f0ad1d_0
+  - iniconfig=1.0.1=py_0
   - ld_impl_linux-64=2.33.1=h53a641e_7
   - libedit=3.1.20191231=h14c3975_1
   - libffi=3.3=he6710b0_2
   - libgcc-ng=9.1.0=hdf63c60_0
   - libstdcxx-ng=9.1.0=hdf63c60_0
+  - more-itertools=8.4.0=py_0
   - ncurses=6.2=he6710b0_1
   - nodeenv=1.4.0=pyh9f0ad1d_0
-  - openssl=1.1.1g=h516909a_1
+  - openssl=1.1.1g=h7b6447c_0
+  - packaging=20.4=py_0
   - pip=20.2.2=py36_0
+  - pluggy=0.13.1=py36_0
   - pre-commit=2.6.0=py36h9f0ad1d_0
+  - py=1.9.0=py_0
+  - pyparsing=2.4.7=py_0
+  - pytest=6.0.1=py36_0
   - python=3.6.10=h7579374_2
   - python_abi=3.6=1_cp36m
   - pyyaml=5.3.1=py36h8c4c3a4_0
