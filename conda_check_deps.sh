@@ -3,7 +3,7 @@
 
 filename='environment.yml'
 
-n=-1 #blank line at the end
+n=0 #blank line at the end
 deps=0
 errCode=0
 first_line=0
