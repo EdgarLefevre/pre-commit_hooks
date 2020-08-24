@@ -17,6 +17,7 @@ if [[ -f $filename ]]; then
         if [[ $first_line == 0 ]]; then
             IFS=' ' read -ra line_array <<< "$var"
             ENV_NAME=${line_array[1]}
+            $first_line=1
             echo $ENV_NAME
         fi
 
