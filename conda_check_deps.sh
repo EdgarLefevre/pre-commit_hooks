@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-filename='env.yaml'
+filename='environment.yml'
 n=-1 #blank line at the end
 deps=0
 errCode=0

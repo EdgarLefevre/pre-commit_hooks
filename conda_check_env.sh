@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-FILE=env.yaml
+FILE=environment.yml
 errCode=0
 if ! [[ -f "$FILE" ]]; then
     errCode=1
