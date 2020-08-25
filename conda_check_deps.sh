@@ -6,7 +6,6 @@ filename='environment.yml'
 n=0 #blank line at the end
 deps=0
 errCode=0
-first_line=0
 
 if [[ -f $filename ]]; then
 
@@ -14,12 +13,6 @@ if [[ -f $filename ]]; then
         # reading each line
         var=$line
         
-        if [[ $first_line == 0 ]]; then
-            IFS=' ' read -ra line_array <<< "$var"
-            ENV_NAME=${line_array[1]}
-            first_line=1
-        fi
-
         if [[ $deps == 1 ]] && [[ $line != "" ]];then
         	n=$((n+1))
         fi   
@@ -27,24 +20,21 @@ if [[ -f $filename ]]; then
         if [[ "$var" == "dependencies:" ]];then
         	deps=1
         fi
+	if [[ $var == *"prefix"* ]]; then
+            IFS=' ' read -ra line_array2 <<< "$var"
+            ENV_PATH=${line_array2[1]}
+        fi
 
     done < $filename
 
 
     # folder
 
-    if [[ -z "${CONDA_EXE}" ]]; then
-      conda_var="${_CONDA_EXE}"
-    else
-      conda_var="${CONDA_EXE}"
-    fi
-
-    conda_path="$(dirname $(dirname "$conda_var"))"/envs/"$ENV_NAME"/conda-meta/""
+    conda_path=$ENV_PATH"/conda-meta/"
     n_folder=$(ls $conda_path | wc -l)
 
     if ! [[ $n == $n_folder ]];then
     	errCode=1
-        echo $n"    "$n_folder
     	echo "environment.yml is not up to date"
     fi
 else
