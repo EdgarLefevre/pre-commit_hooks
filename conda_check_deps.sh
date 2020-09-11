@@ -35,7 +35,7 @@ if [[ -f $filename ]]; then
 
     if ! [[ $n == $n_folder ]];then
     	errCode=1
-    	echo "environment.yml is not up to date"
+    	echo "environment.yml is not up to date, run: conda env export > environment.yml"
     fi
 else
     errCode=1
