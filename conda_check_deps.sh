@@ -33,7 +33,7 @@ if [[ -f $filename ]]; then
     conda_path=$ENV_PATH"/conda-meta/"
     n_folder=$(ls $conda_path | grep json | wc -l)
 
-    if ! [[ ($n -1) == $n_folder ]];then
+    if ! [[ $n == $n_folder ]];then
     	errCode=1
     	echo "environment.yml is not up to date, run: conda env export > environment.yml"
     fi
