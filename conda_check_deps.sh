@@ -20,10 +20,10 @@ if [[ -f $filename ]]; then
         if [[ "$var" == "dependencies:" ]];then
         	deps=1
         fi
-	if [[ $var == *"prefix"* ]]; then
-            IFS=' ' read -ra line_array2 <<< "$var"
-            ENV_PATH=${line_array2[1]}
-        fi
+        if [[ $var == *"prefix"* ]]; then
+                  IFS=' ' read -ra line_array2 <<< "$var"
+                  ENV_PATH=${line_array2[1]}
+              fi
 
     done < $filename
 
@@ -41,4 +41,6 @@ else
     errCode=1
     echo "environment.yml does not exist"
 fi
+echo $n
+echo $n_folder
 exit $errCode
