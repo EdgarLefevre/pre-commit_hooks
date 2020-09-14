@@ -41,6 +41,6 @@ else
     errCode=1
     echo "environment.yml does not exist"
 fi
-echo $n
-echo $n_folder
+echo "lib in environme.yml: "$n
+echo "lib in conda-meta folder: "$n_folder
 exit $errCode
