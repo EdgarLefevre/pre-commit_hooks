@@ -23,7 +23,10 @@ if [[ -f $filename ]]; then
         if [[ $var == *"prefix"* ]]; then
                   IFS=' ' read -ra line_array2 <<< "$var"
                   ENV_PATH=${line_array2[1]}
-              fi
+        fi
+        if [[ $line == *"pip:"]];then
+            deps=2
+        fi
 
     done < $filename
 
@@ -33,9 +36,6 @@ if [[ -f $filename ]]; then
     conda_path=$ENV_PATH"/conda-meta/"
     n_folder=$(ls $conda_path | grep json | wc -l)
     n=$((n-1))
-    echo "Avant comparaison"
-    echo "lib in environment.yml: "$n
-    echo "lib in conda-meta folder: "$n_folder
     if ! [[ $n == $n_folder ]];then
     	errCode=1
     	echo "environment.yml is not up to date, run: conda env export > environment.yml"
@@ -44,7 +44,6 @@ else
     errCode=1
     echo "environment.yml does not exist"
 fi
-echo "fin code"
 echo "lib in environment.yml: "$n
 echo "lib in conda-meta folder: "$n_folder
 exit $errCode
