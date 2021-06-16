@@ -29,7 +29,7 @@ if [[ -f $filename ]]; then
         fi
 
     done < $filename
-
+# grep "=" $filename | grep -v "==" | wc -l 
 
     # folder
 
