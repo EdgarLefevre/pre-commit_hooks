@@ -23,6 +23,8 @@ if [[ -f $filename ]]; then
         if [[ $var == *"prefix"* ]];then
             IFS=' ' read -ra line_array2 <<< "$var"
             ENV_PATH=${line_array2[1]}
+            IFS="/" read -ra env_name <<< $ENV_PATH
+            ENV_NAME=${env_name[-1]}
         fi
         if [[ $line == *"pip:" ]];then
             deps=2
@@ -33,7 +35,7 @@ if [[ -f $filename ]]; then
 
     # folder
 
-    conda_path=$ENV_PATH"/conda-meta/"
+    conda_path=$CONDA_PREFIX_1"/envs/"$ENV_NAME"/conda-meta/"
     n_folder=$(ls $conda_path | grep json | wc -l)
     n=$((n-1))
     if ! [[ $n == $n_folder ]];then
